@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Figtree', sans-serif;
+}
+
+body {
+  background-color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body.darkmode {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+/* NAVBAR IGUAL AO SITE ORIGINAL */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 50px;
+  position: fixed;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  background-color: rgb(0, 106, 255);
+  z-index: 9999 !important;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.logo {
+  position: absolute;
+  left: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+.nav-itens {
+  display: flex;
+  list-style: none;
+}
+
+.nav-itens li {
+  cursor: pointer;
+  position: relative;
+  color: white;
+}
+
+.nav-itens li a {
+  margin: 0 15px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: white;
+}
+
+.autenticar {
+  position: absolute;
+  right: 50px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-login {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-login:hover {
+  background-color: white;
+  color: rgb(0, 106, 255);
+}
+
+.nav-itens li:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background: #ffffff;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.nav-itens li:hover:after {
+  width: 100%;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.app {
+  background: #fff;
+  width: 90%;
+  max-width: 600px;
+  margin: 120px auto 40px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+body.darkmode .app {
+  background: #2a2a2a;
+  color: white;
+}
+
+.app h1 {
+  font-size: 25px;
+  color: rgb(0, 106, 255);
+  font-weight: 600;
+  border-bottom: 1px solid #333;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+body.darkmode .app h1 {
+  border-bottom-color: #555;
+}
+
+.quiz {
+  padding: 20px 0;
+}
+
+.quiz h2 {
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+body.darkmode .quiz h2 {
+  color: white;
+}
+
+.btn {
+  background: #fff;
+  color: #222;
+  font-weight: 500;
+  width: 100%;
+  border: 1px solid #222;
+  padding: 12px;
+  margin: 10px 0;
+  text-align: left;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 14px;
+}
+
+body.darkmode .btn {
+  background: #333;
+  color: white;
+  border-color: #555;
+}
+
+.btn:hover:not([disabled]) {
+  background: #222;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+body.darkmode .btn:hover:not([disabled]) {
+  background: rgb(0, 106, 255);
+  border-color: rgb(0, 106, 255);
+}
+
+.btn:disabled {
+  cursor: no-drop;
+}
+
+#next-btn {
+  background: rgb(0, 106, 255);
+  color: #fff;
+  font-weight: 500;
+  width: 150px;
+  border: 0;
+  padding: 12px;
+  margin: 20px auto 0;
+  border-radius: 25px;
+  cursor: pointer;
+  display: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+#next-btn:hover {
+  background: #0056cc;
+  transform: translateY(-2px);
+}
+
+#next-btn.show {
+  display: block;
+}
+
+.correct {
+  background: #9aeabc !important;
+  border-color: #28a745 !important;
+  color: #155724 !important;
+}
+
+.incorrect {
+  background: #ff9393 !important;
+  border-color: #dc3545 !important;
+  color: #721c24 !important;
+}
+
+/* TEMA TOGGLE */
+.theme-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgb(0, 106, 255);
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 106, 255, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 106, 255, 0.4);
+}
