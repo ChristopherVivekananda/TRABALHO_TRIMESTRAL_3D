@@ -1,4 +1,4 @@
-let trilho = document.getElementById('trilho');
+        let trilho = document.getElementById('trilho');
         let body = document.body;
 
         trilho.addEventListener('click', () => {

@@ -7,38 +7,97 @@
     <link rel="stylesheet" href="style9.css" />
   </head>
   <body>
-    <body class="darkmode">
-      <!-- NAVBAR EXATA DO SITE ORIGINAL -->
-      <nav class="navbar">
-          <div class="logo">
-              <a href="index.html">
-                  <img src="Novo Projeto.png" alt="Logo da Empresa">
-              </a>
-          </div>
-          <ul class="nav-itens">
-              <li><a href="#">Simulados</a></li>
-              <li><a href="#">Questões</a></li>
-              <li><a href="#">Histórico</a></li>
-              <li><a href="#">Ranking</a></li>
-          </ul>
-          <div class="autenticar">
-              <a href="login.html" class="btn-login">Entrar</a>
-              <a href="cadastro.html" class="btn-login">Cadastrar</a>
-          </div>
-      </nav>
-  
-      <!-- CONTEÚDO DO QUIZ -->
-      <div class="app">
-          <h1>Simulado CNU</h1>
-          <div class="quiz">
-              <h2 id="question">Carregando questão...</h2>
-              <div id="answer-buttons">
-                  <!-- Botões serão inseridos aqui -->
-              </div>
-              <button id="next-btn">Próxima</button>
-          </div>
-      </div>
-  
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="Novo Projeto.png" alt="Logo da Empresa">
+            </a>
+        </div>
+        <ul class="nav-itens">
+            <li><a href="#">Simulados</a></li>
+            <li><a href="historico.html">Histórico</a></li>
+            <li><a href="#">Ranking</a></li>
+        </ul>
+        <div class="autenticar">
+            <a href="login.html" class="btn-login">Entrar</a>
+            <a href="cadastro.html" class="btn-login">Cadastrar</a>
+        </div>
+    </nav>
+    <div class="quiz-container">
+        <div class="app">
+            <div class="quiz-header">
+                <h1>Quiz CNU</h1>
+            </div>
+            
+            <div class="quiz" id="quiz-section">
+                <h2 id="question">Carregando pergunta...</h2>
+                <div id="answer-buttons">
+                </div>
+                <div class="quiz-actions">
+                    <button id="next-btn">Próxima</button>
+                </div>
+            </div>
+
+            <div class="score-section" id="score-section" style="display: none;">
+                <div class="score-icon">🎯</div>
+                <h2 id="final-score">Seu Resultado</h2>
+                <div class="score-details">
+                    <div class="score-item">
+                        <span class="score-label">Acertos:</span>
+                        <span class="score-value" id="correct-answers">0</span>
+                    </div>
+                    <div class="score-item">
+                        <span class="score-label">Total:</span>
+                        <span class="score-value" id="total-answers">3</span>
+                    </div>
+                    <div class="score-item">
+                        <span class="score-label">Percentual:</span>
+                        <span class="score-value" id="percentage">0%</span>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button id="restart-btn">Tentar Novamente</button>
+                    <a href="index.html" class="btn-home">Voltar ao Início</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footercontats">
+            <h1>SURF VESTIBULARES</h1>
+            <ul class="footerlist">
+                <li>
+                    <h3>Outros</h3>
+                </li>
+                <li>
+                    <a href="#" class="footerlink">Sobre Nós</a>
+                </li>
+                <li>
+                    <a href="#" class="footerlink">Parcerias</a>
+                </li>
+                <li>
+                    <a href="#" class="footerlink">Nossos Objetivos</a>
+                </li>
+                <li>
+                    <h3>Conteúdos</h3>
+                </li>
+                <li>
+                    <a href="#" class="footerlink">E-books</a>
+                </li>
+                <li>
+                    <a href="#" class="footerlink">Notícias</a>
+                </li>
+                <li>
+                    <a href="#" class="footerlink">Cursos</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footercopyright">
+            &#169 2025 SURF VESTIBULARES™ todos os direitos reservados
+        </div>
+    </footer>
+
     <script src="main.js"></script>
-  </body>
+</body>
 </html>
