@@ -1,0 +1,431 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Figtree', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.body {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 50px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 50px;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(0, 106, 255);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.logo {
+    position: absolute;
+    left: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+}
+
+.nav-itens {
+    display: flex;
+    list-style: none;
+}
+
+.nav-itens li {
+    cursor: pointer;
+    position: relative;
+    color: white;
+}
+
+.nav-itens li a {
+    margin: 0 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-itens li.active a {
+    font-weight: 600;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+
+.autenticar {
+    position: absolute;
+    right: 50px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.trilho {
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-right: 10px;
+}
+
+.trilho .indicador {
+    width: 21px;
+    height: 21px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    transition: 0.3s ease;
+}
+
+.trilho.dark .indicador {
+    left: 27px;
+    background-color: white;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #ddd;
+}
+
+.hero {
+    background: linear-gradient(135deg, #3d98ff 0%, #0099ff 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+    transform: translateY(59px);
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.btn-section {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-section:hover {
+    background-color: white;
+    color: rgb(0, 106, 255);
+}
+
+body.dark .btn-section:hover {
+    color: #2a2a2a;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.h1-hero {
+    color: black;
+    transform: translateY(190px);
+    transition: color 0.3s ease;
+}
+
+body.dark .h1-hero {
+    color: white;
+}
+
+.simulados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    transform: translateY(150px);
+}
+
+.simulado-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px;
+}
+
+body.dark .simulado-card {
+    background-color: #2a2a2a;
+    border-color: #444;
+    color: white;
+}
+
+.simulado-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.simulado-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.simulado-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.simulado-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(0, 106, 255);
+    margin: 0;
+}
+
+.simulado-info {
+    flex-grow: 1;
+}
+
+.simulado-description {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+body.dark .simulado-description {
+    color: #ccc;
+}
+
+.simulado-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+body.dark .simulado-details {
+    color: #aaa;
+}
+
+.btn-section {
+    background: rgb(0, 106, 255);;
+    border: 2px solid white;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-section:hover {
+    background-color: white;
+    color: rgb(0, 106, 255);
+    border: 2px solid rgb(0, 106, 255);
+}
+
+.difficulty-badge {
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.difficulty-facil {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.difficulty-medio {
+    background-color: #FF9800;
+    color: white;
+}
+
+.difficulty-dificil {
+    background-color: #F44336;
+    color: white;
+}
+
+footer {
+    width: 100%;
+    background: white;
+    padding: 2rem 0;
+    border-top: 1px solid #eee;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin-top: 150px;
+}
+
+body.dark footer {
+    background: #2a2a2a;
+    border-top-color: #444;
+}
+
+.footercontats {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem 1.5rem;
+    margin: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: color 0.3s ease;
+}
+
+body.dark .footercontats {
+    color: white;
+}
+
+.footercontats h1 {
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: rgb(0, 106, 255);
+}
+
+.footerlist {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.footerlist h3 {
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+body.dark .footerlist h3 {
+    color: #ccc;
+}
+
+.footerlist .footerlink {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: 0.25s;
+    padding: 0.25rem 0;
+}
+
+body.dark .footerlist .footerlink {
+    color: #ccc;
+}
+
+.footerlist .footerlink:hover {
+    color: rgb(0, 106, 255);
+    transform: translateX(5px);
+}
+
+.footercopyright {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    padding: 1rem;
+    border-top: 1px solid #eee;
+    margin-top: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+body.dark .footercopyright {
+    color: #ccc;
+    border-top-color: #444;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .logo {
+        position: static;
+        margin-bottom: 10px;
+    }
+    
+    .autenticar {
+        position: static;
+        margin-top: 10px;
+    }
+
+    .simulados-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+}
