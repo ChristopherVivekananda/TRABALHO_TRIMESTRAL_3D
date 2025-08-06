@@ -62,6 +62,7 @@ R: Tela principal (sem login -> Login/cadastro -> Tela principal (com login) ->
 
 📌 12. Restrições de Uso
 Regras impostas (ex: só admins podem excluir, limite de caracteres)
+R: Os usuários não terão acesso inteiro ao programa, não podendo fazer grandes alterações 
 
 📌 14. Plataforma Alvo
 Web, mobile, desktop ou multiplataforma?
