@@ -7,6 +7,12 @@
 
 body {
     background-color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+    background-color: #1a1a1a;
+    color: #fff;
 }
 
 .body {
@@ -25,6 +31,7 @@ body {
     width: 100%;
     background-color: rgb(0, 106, 255);
     z-index: 1000;
+    transition: background-color 0.3s ease;
 }
 
 .logo {
@@ -58,7 +65,7 @@ body {
     color: white;
 }
 
-.nav-itens li a{
+.nav-itens li a {
     margin: 0 15px;
     font-size: 14px;
     letter-spacing: 1px;
@@ -74,36 +81,44 @@ body {
     align-items: center;
 }
 
-.btn-login {
-    background: none;
-    border: 2px solid white;
-    color: white;
-    padding: 8px 20px;
+.trilho {
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
     border-radius: 25px;
-    font-size: 14px;
-    font-weight: 500;
+    position: relative;
     cursor: pointer;
-    transition: all 0.3s;
-    text-decoration: none;
+    transition: 0.3s ease;
+    margin-right: 10px;
+}
+
+.trilho .indicador {
+    width: 21px;
+    height: 21px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    transition: 0.3s ease;
+}
+
+.trilho.dark .indicador {
+    left: 27px;
+    background-color: white;
+}
+
+.user-profile {
     display: flex;
     align-items: center;
-    gap: 5px;
 }
 
-.btn-login:hover {
-    background-color: white;
-    color: rgb(0, 106, 255);
-}
-
-.nav-itens li:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1px;
-    background: #ffffff;
-    bottom: -5px;
-    left: 0;
-    transition: width 0.3s;
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .nav-itens li:hover:after {
@@ -172,6 +187,11 @@ body {
     transition: transform 0.3s ease;
 }
 
+body.dark .stat-card {
+    background: #2a2a2a;
+    border-color: #444;
+}
+
 .stat-number {
     font-size: 2.5rem;
     font-weight: bold;
@@ -179,9 +199,17 @@ body {
     margin-bottom: 10px;
 }
 
+body.dark .stat-number {
+    color: #ffffff;
+}
+
 .stat-label {
     color: #666;
     font-weight: 500;
+}
+
+body.dark .stat-label {
+    color: #ccc;
 }
 
 .features-grid {
@@ -197,6 +225,11 @@ body {
     border-radius: 15px;
     border: 1px solid #ddd;
     transition: all 0.3s ease;
+}
+
+body.dark .feature-card {
+    background: #2a2a2a;
+    border-color: #444;
 }
 .feature-icon {
     width: 60px;
@@ -218,9 +251,18 @@ body {
     color: #333;
 }
 
+body.dark .feature-title {
+    color: #fff;
+}
+
 .feature-description {
     color: #666;
     line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+body.dark .feature-description {
+    color: #ccc;
 }
 
 .cta-section {

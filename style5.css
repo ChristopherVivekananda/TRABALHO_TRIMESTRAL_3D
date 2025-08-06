@@ -256,12 +256,8 @@ body.dark .feature-card {
 
 .feature-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-body.dark .feature-card:hover {
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
 
 .feature-title {
     font-size: 1.3rem;

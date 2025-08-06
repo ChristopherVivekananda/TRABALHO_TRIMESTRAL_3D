@@ -7,7 +7,14 @@
 
 body {
     background-color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+body.dark {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
 
 .body {
     font-size: 16px;
@@ -25,6 +32,7 @@ body {
     width: 100%;
     background-color: rgb(0, 106, 255);
     z-index: 1000;
+    transition: background-color 0.3s ease;
 }
 
 .logo {
@@ -74,6 +82,38 @@ body {
     align-items: center;
 }
 
+.trilho {
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-right: 10px;
+}
+
+.trilho .indicador {
+    width: 21px;
+    height: 21px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    transition: 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.trilho.dark {
+    background-color: #4CAF50;
+}
+
+.trilho.dark .indicador {
+    left: 27px;
+    background-color: white;
+}
+
 .user-profile {
     display: flex;
     align-items: center;
@@ -83,7 +123,14 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    border: 2px solid white;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 .nav-itens li:after {
@@ -160,7 +207,12 @@ body {
     border-radius: 15px;
     text-align: center;
     border: 1px solid #ddd;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+body.dark .stat-card {
+    background: #2a2a2a;
+    border-color: #444;
 }
 
 .stat-number {
@@ -168,11 +220,21 @@ body {
     font-weight: bold;
     color: #000000;
     margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+body.dark .stat-number {
+    color: #ffffff;
 }
 
 .stat-label {
     color: #666;
     font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+body.dark .stat-label {
+    color: #ccc;
 }
 
 .features-grid {
@@ -189,17 +251,10 @@ body {
     border: 1px solid #ddd;
     transition: all 0.3s ease;
 }
-.feature-icon {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #3d98ff 0%, #0099ff 100%);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 24px;
-    margin-bottom: 20px;
+
+body.dark .feature-card {
+    background: #2a2a2a;
+    border-color: #444;
 }
 
 .feature-title {
@@ -207,12 +262,24 @@ body {
     font-weight: 600;
     margin-bottom: 15px;
     color: #333;
+    transition: color 0.3s ease;
+}
+
+
+body.dark .feature-title {
+    color: #fff;
 }
 
 .feature-description {
     color: #666;
     line-height: 1.6;
+    transition: color 0.3s ease;
 }
+
+body.dark .feature-description {
+    color: #ccc;
+}
+
 
 .cta-section {
     background: linear-gradient(135deg, rgb(0, 106, 255), #0088cc);
@@ -267,6 +334,12 @@ footer {
     background: white;
     padding: 2rem 0;
     border-top: 1px solid #eee;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+body.dark footer {
+    background: #2a2a2a;
+    border-top-color: #444;
 }
 
 .footercontats {
@@ -278,6 +351,11 @@ footer {
     margin: 0;
     max-width: 1200px;
     margin: 0 auto;
+    transition: color 0.3s ease;
+}
+
+body.dark .footercontats {
+    color: white;
 }
 
 .footer-brand {
@@ -293,7 +371,6 @@ footer {
 
 .footer-columns {
     display: flex;
-    top: 100px;
     gap: 4rem;
     flex: 2;
     justify-content: flex-end;
@@ -316,6 +393,11 @@ footer {
     margin-bottom: 0.5rem;
     color: #333;
     font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+body.dark .footerlist h3 {
+    color: #ccc;
 }
 
 .footerlist .footerlink {
@@ -323,6 +405,10 @@ footer {
     text-decoration: none;
     transition: 0.25s;
     padding: 0.25rem 0;
+}
+
+body.dark .footerlist .footerlink {
+    color: #ccc;
 }
 
 .footerlist .footerlink:hover {
@@ -339,4 +425,10 @@ footer {
     margin-top: 1rem;
     color: #666;
     font-size: 0.9rem;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+body.dark .footercopyright {
+    color: #ccc;
+    border-top-color: #444;
 }
