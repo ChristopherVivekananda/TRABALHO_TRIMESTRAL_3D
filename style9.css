@@ -15,12 +15,13 @@ body.dark {
     color: #fff;
 }
 
-.navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding: 20px 50px;
             position: fixed;
+            top: 0;
             width: 100%;
             background-color: rgb(0, 106, 255);
             z-index: 1000;
@@ -112,10 +113,11 @@ body.dark {
             border-radius: 50%;
             cursor: pointer;
             transition: all 0.3s ease;
-        }
-
-        .nav-itens li:hover:after {
-            width: 100%;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
         }
 
 .hero-section {
@@ -187,22 +189,6 @@ body.dark {
     font-size: 2rem;
     margin-bottom: 20px;
     font-weight: 700;
-}
-
-.progress-bar {
-    background: rgba(255, 255, 255, 0.2);
-    height: 8px;
-    border-radius: 4px;
-    overflow: hidden;
-    margin-bottom: 15px;
-}
-
-.progress {
-    background: white;
-    height: 100%;
-    border-radius: 4px;
-    transition: width 0.3s ease;
-    width: 33.33%;
 }
 
 .question-counter {
@@ -285,27 +271,27 @@ body.dark {
     margin-top: 20px;
 }
 
-#next-btn {
-    background: linear-gradient(135deg, rgb(0, 106, 255), #0088cc);
+#btn-section {
+    background: rgb(0, 106, 255);
+    border: 2px solid white;
     color: white;
-    font-weight: 600;
-    width: 200px;
-    border: none;
-    padding: 15px 30px;
+    padding: 8px 20px;
     border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
     cursor: pointer;
-    display: none;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 106, 255, 0.3);
+    transition: all 0.3s;
+    text-decoration: none;
+    align-items: center;
+    gap: 5px;
 }
 
-#next-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 106, 255, 0.4);
+#btn-section:hover {
+    background-color: white;
+    color: rgb(0, 106, 255);
+    border: 2px solid rgb(0, 106, 255);;
 }
 
-/* Score Section */
 .score-section {
     padding: 40px;
     text-align: center;

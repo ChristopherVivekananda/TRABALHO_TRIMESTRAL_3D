@@ -39,7 +39,7 @@ const questions = [
       { id: 5, text: "A liberdade de expressão é ilimitada pela Constituição.", correct: false },
     ],
   },
-    {
+  {
     question: "(CNU) Sobre o conceito de eficiência na administração pública:",
     answers: [
       { id: 1, text: "Diz respeito exclusivamente ao corte de despesas.", correct: false },
@@ -49,21 +49,62 @@ const questions = [
       { id: 5, text: "Não possui relação com a qualidade dos serviços prestados.", correct: false },
     ],
   },
-      {
-    question: "(CNU) Sobre o conceito de eficiência na administração pública:",
+  {
+    question: "(CNU) Se toda política é pública, e toda ação pública deve ser transparente, então:",
     answers: [
-      { id: 1, text: "Diz respeito exclusivamente ao corte de despesas.", correct: false },
-      { id: 2, text: "Refere-se ao atendimento das necessidades dos gestores, não da população.", correct: false },
-      { id: 3, text: "É um princípio explícito na Constituição Federal desde a Reforma de 1998.", correct: true },
-      { id: 4, text: "Está vinculado à hierarquia militar.", correct: false },
-      { id: 5, text: "Não possui relação com a qualidade dos serviços prestados.", correct: false },
+      { id: 1, text: "Toda política deve ser secreta.", correct: false },
+      { id: 2, text: "Nenhuma política precisa de transparência.", correct: false },
+      { id: 3, text: "Toda política deve ser transparente.", correct: true },
+      { id: 4, text: "Toda política deve ser transparente.", correct: false },
+      { id: 5, text: "A transparência e a política não se relacionam.", correct: false },
+    ],
+  },
+  {
+    question: "(CNU) Em 2024, a COP 29 discutiu medidas para conter o aquecimento global. Qual dos seguintes compromissos está relacionado ao Acordo de Paris?",
+    answers: [
+      { id: 1, text: "Redução do uso de armas nucleares.", correct: false },
+      { id: 2, text: "Eliminação da pobreza extrema até 2025.", correct: false },
+      { id: 3, text: "Limitar o aumento da temperatura média global a no máximo 1,5°C.", correct: true },
+      { id: 4, text: "Proibição do uso de combustíveis fósseis até 2024.", correct: false },
+      { id: 5, text: "Construção de muros contra enchentes em zonas urbanas.", correct: false },
+    ],
+  },
+  {
+    question: "(CNU) Assinale a alternativa em que a forma verbal está empregada corretamente:",
+    answers: [
+      { id: 1, text: "Se eu ver ele, aviso.", correct: false },
+      { id: 2, text: "Nós vai no evento amanhã.", correct: false },
+      { id: 3, text: "Haviam muitas pessoas na reunião.", correct: false },
+      { id: 4, text: "Ela interviu na discussão.", correct: true },
+      { id: 5, text: "Fazem dois anos que estudo para concursos.", correct: false },
+    ],
+  },
+
+  {
+    question: "(CNU) Sobre os direitos e garantias fundamentais previstos na Constituição Federal de 1988:",
+    answers: [
+      { id: 1, text: "Nenhum direito individual pode ser restringido, mesmo durante estado de sítio.", correct: false },
+      { id: 2, text: "A casa é asilo inviolável do indivíduo, salvo em caso de flagrante delito ou desastre.", correct: true },
+      { id: 3, text: "É permitido ao Estado impedir manifestações públicas de cunho político.", correct: false },
+      { id: 4, text: "A tortura é permitida em casos extremos de guerra.", correct: false },
+      { id: 5, text: "O sigilo das comunicações telefônicas pode ser quebrado por decisão administrativa.", correct: false },
+    ],
+  },
+  {
+    question: "(CNU) De acordo com a Constituição Federal de 1988, é um direito social expressamente previsto:",
+    answers: [
+      { id: 1, text: "O lucro como princípio da ordem econômica.", correct: false },
+      { id: 2, text: "A livre circulação entre países membros do Mercosul.", correct: false },
+      { id: 3, text: "É permitido ao Estado impedir manifestações públicas de cunho político.", correct: false },
+      { id: 4, text: "A taxação de todas as manifestações artísticas.", correct: false },
+      { id: 5, text: "O acesso à cultura, ao lazer e à segurança.", correct: true },
     ],
   },
 ];
 
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
-const nextButton = document.getElementById("next-btn");
+const nextButton = document.getElementById("btn-section");
 
 let currentQuestionIndex = 0;
 let score = 0;
