@@ -110,15 +110,10 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            border: 2px solid white;
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
-        .profile-pic:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-        }
 
         .nav-itens li:after {
             content: '';
@@ -313,6 +308,10 @@
 
         .your-position {
             background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+            border: 2px solid #f39c12;
+        }
+        body.dark .your-position {
+            background: linear-gradient(135deg, #ad8603, #b88d00);
             border: 2px solid #f39c12;
         }
 

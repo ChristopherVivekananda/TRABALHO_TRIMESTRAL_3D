@@ -39,44 +39,35 @@
         <div class="login-container">
         <div class="login-card">
             <div class="login-header">
-                <h1>Entrar</h1>
-                <p>Faça login para acessar sua conta</p>
+                <h1>Cadastrar</h1>
+                <p>Crie sua conta gratuita</p>
             </div>
-            
-            <form class="login-form" id="loginForm">
+
+            <form class="login-form" id="registerForm">
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Digite seu email" required>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="password">Senha</label>
-                    <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                    <input type="password" id="password" name="password" placeholder="Crie uma senha" required>
                 </div>
-                
-                <button type="submit" class="login-btn">Entrar</button>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirmar Senha</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirme sua senha" required>
+                </div>
+
+                <button type="submit" class="login-btn">Cadastrar</button>
             </form>
-            
+
             <div class="login-links">
-                <a href="#" id="forgotPassword">Esqueci minha senha</a>
-                <a href="cadastro.html" id="createAccount">Não tem conta? Cadastre-se</a>
-            </div>
-            
-            <div class="divider">
-                <span>ou</span>
-            </div>
-            
-            <div class="social-login">
-                <button class="social-btn" id="googleLogin">
-                    <span>Google</span>
-                </button>
-                <button class="social-btn" id="facebookLogin">
-                    <span>Facebook</span>
-                </button>
+                <a href="login.html" id="alreadyHaveAccount">Já tem conta? Faça login</a>
             </div>
         </div>
     </div>
         <script src="global.js"></script>
-        <script src="main4.js"></script>
+        <script src="main6.js"></script>
 </body>
 </html>

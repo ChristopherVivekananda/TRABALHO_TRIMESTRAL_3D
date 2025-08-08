@@ -21,123 +21,108 @@ body.dark {
     padding: 50px;
 }
 
-.navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 50px;
-    position: fixed;
-    width: 100%;
-    background-color: rgb(0, 106, 255);
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-}
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 50px;
+            position: fixed;
+            width: 100%;
+            background-color: rgb(0, 106, 255);
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
 
-.logo {
-    position: absolute;
-    left: 50px;
-    display: flex;
-    align-items: center;
-}
+        .logo {
+            position: absolute;
+            left: 50px;
+            display: flex;
+            align-items: center;
+        }
 
-.logo a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
+        .logo a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
 
-.logo img {
-    height: 50px;
-    width: auto;
-    max-width: 200px;
-    object-fit: contain;
-}
+        .logo img {
+            height: 50px;
+            width: auto;
+            max-width: 200px;
+            object-fit: contain;
+        }
 
-.nav-itens {
-    display: flex;
-    list-style: none;
-}
+        .nav-itens {
+            display: flex;
+            list-style: none;
+        }
 
-.nav-itens li {
-    cursor: pointer;
-    position: relative;
-    color: white;
-}
+        .nav-itens li {
+            cursor: pointer;
+            position: relative;
+            color: white;
+        }
 
-.nav-itens li a{
-    margin: 0 15px;
-    font-size: 14px;
-    letter-spacing: 1px;
-    text-decoration: none;
-    color: white;
-}
+        .nav-itens li a {
+            margin: 0 15px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-decoration: none;
+            color: white;
+        }
 
-.autenticar {
-    position: absolute;
-    right: 50px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
+        .autenticar {
+            position: absolute;
+            right: 50px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
 
-.trilho {
-    width: 50px;
-    height: 25px;
-    background-color: #ccc;
-    border-radius: 25px;
-    position: relative;
-    cursor: pointer;
-    transition: 0.3s ease;
-    margin-right: 10px;
-}
+        .trilho {
+            width: 50px;
+            height: 25px;
+            background-color: #ccc;
+            border-radius: 25px;
+            position: relative;
+            cursor: pointer;
+            transition: 0.3s ease;
+            margin-right: 10px;
+        }
 
-.trilho .indicador {
-    width: 21px;
-    height: 21px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    left: 2px;
-    top: 2px;
-    transition: 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
+        .trilho .indicador {
+            width: 21px;
+            height: 21px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            transition: 0.3s ease;
+        }
 
-.trilho.dark {
-    background-color: #4CAF50;
-}
+        .trilho.dark .indicador {
+            left: 27px;
+            background-color: white;
+        }
 
-.trilho.dark .indicador {
-    left: 27px;
-    background-color: white;
-}
+        .user-profile {
+            display: flex;
+            align-items: center;
+        }
 
-.user-profile {
-    display: flex;
-    align-items: center;
-}
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
 
-.profile-pic {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.nav-itens li:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1px;
-    background: #ffffff;
-    bottom: -5px;
-    left: 0;
-    transition: width 0.3s;
-}
-
-.nav-itens li:hover:after {
-    width: 100%;
-}
+        .nav-itens li:hover:after {
+            width: 100%;
+        }
 
 .hero-section {
     background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
