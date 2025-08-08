@@ -62,16 +62,19 @@ R: Tela principal (sem login -> Login/cadastro -> Tela principal (com login) ->
 
 📌 12. Restrições de Uso
 Regras impostas (ex: só admins podem excluir, limite de caracteres)
-R: Os usuários não terão acesso inteiro ao programa, não podendo fazer grandes alterações 
+R: Os usuários não terão acesso inteiro ao programa, não podendo fazer grandes alterações como exclusão de itens do código
 
 📌 14. Plataforma Alvo
 Web, mobile, desktop ou multiplataforma?
+R: Web.
 
 📌 15. Autenticação e Segurança
 O sistema exige login? Quais níveis de permissão?
+: exige, para segurança. o aluno podem apenas navegar e realizar quizzes, os administradores teram acesso ao código e poderam realizar as mudanças que acharem necessárias.
 
 📌 16. Armazenamento de Dados
 Que tipo de dados será salvo? Onde e como?
+R: Dados de Login, histórico e ranking
 
 📌 17. Layout e Design Desejado
 Referências visuais, cores, estilo ou acessibilidade (se houver)
